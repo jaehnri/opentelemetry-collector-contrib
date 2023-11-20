@@ -43,6 +43,11 @@ type Config struct {
 	// https://opensearch.org/docs/latest/dashboards/im-dashboards/datastream/
 	LogsIndex string `mapstructure:"logs_index"`
 
+	// TracesIndex configures the index, index alias, or data stream name traces should be indexed in.
+	// https://opensearch.org/docs/latest/im-plugin/index/
+	// https://opensearch.org/docs/latest/dashboards/im-dashboards/datastream/
+	TracesIndex string `mapstructure:"traces_index"`
+
 	// BulkAction configures the action for ingesting data. Only `create` and `index` are allowed here.
 	// If not specified, the default value `create` will be used.
 	BulkAction string `mapstructure:"bulk_action"`
